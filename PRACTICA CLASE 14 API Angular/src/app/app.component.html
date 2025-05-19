@@ -1,0 +1,27 @@
+
+<div class="photo-grid">
+  <div *ngFor="let photo of photos" class="photo-card">
+    <h3>{{ photo.author }}</h3>
+    <img [src]="photo.download_url" [alt]="photo.author" />
+  </div>
+</div>
+
+<style>
+  .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.photo-card {
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+</style>
